@@ -31,6 +31,11 @@ gem 'jquery-rails'
 # Use Devise for Elore Authentication
 gem 'devise'
 
+gem 'simple_form'
+
+# Use acts-as-taggable-on for tagging
+gem 'acts-as-taggable-on', '~> 6.0' #must be this version for Rails5
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

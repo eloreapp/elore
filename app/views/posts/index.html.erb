@@ -1,0 +1,21 @@
+<div class="row">
+  <% @posts.each do |post| %>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= post.name %>
+          </h5>
+          <p class="card-text">
+            By: <%= 'aaaa' %>
+          </p>
+        </div>
+        <div class="card-footer">
+          <% post.tag_list.each do |tag| %>
+            In <%= tag %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
