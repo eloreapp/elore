@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.order( 'created_at DESC' )
+    @posts = if params[:tag]
+      Post.tagged_with(params[:tag])
+    else
+      Post.all.order( 'created_at DESC' )
+    end
   end
 
   def show
@@ -29,9 +33,13 @@ class PostsController < ApplicationController
   def destroy
   end
 
+  def tag_cloud
+    @tags = Post.tag_counts_on(:tags)
+  end
+
   private
 
   def post_params
-    params.require(:post).permit( :name, :body, :url, :tag_list )
+    params.require(:post).permit( :name, :body, :url, :tag_list, :image )
   end
 end

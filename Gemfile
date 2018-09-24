@@ -28,6 +28,8 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'jquery-rails'
 
+gem "font-awesome-rails"
+
 # Use Devise for Elore Authentication
 gem 'devise'
 
@@ -42,7 +44,9 @@ gem 'acts-as-taggable-on', '~> 6.0' #must be this version for Rails5
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
+
+gem 'image_processing', '~> 1.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

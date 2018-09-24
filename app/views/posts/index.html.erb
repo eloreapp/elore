@@ -1,19 +1,36 @@
 <div class="row">
   <% @posts.each do |post| %>
-    <div class="col-4">
+    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12">
       <div class="card">
+        <%= image_tag url_for( post.image.variant( resize: '286x180' ) ), class: 'card-img-top' %>
+        <%# <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap"> %>
         <div class="card-body">
           <h5 class="card-title">
-            <%= post.name %>
+            <%= link_to post.name, post_path(post) %>
           </h5>
           <p class="card-text">
             By: <%= 'aaaa' %>
           </p>
         </div>
         <div class="card-footer">
-          <% post.tag_list.each do |tag| %>
-            In <%= tag %>
-          <% end %>
+          <div class="row">
+            <div class="col-auto mr-auto align-self-center">
+              <% post.tag_list.each do |tag| %>
+                In <%= tag %>
+              <% end %>
+            </div>
+            <div class="col-auto align-self-center">
+              <div class="btn-group" role="group">
+                <%= link_to 'Like', root_path, class: 'btn btn-outline-secondary' %>
+                <%# <button type="button" class="btn btn-outline-secondary">
+                  Like
+                </button> %>
+                <button type="button" class="btn btn-outline-secondary">
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
