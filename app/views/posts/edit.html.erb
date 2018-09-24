@@ -15,7 +15,7 @@
         <%= form.input_field :body, class: 'form-control', placeholder: 'Write a description of the post' %>
       </div>
       <div class="form-group">
-        <%= form.label :url, 'Website URL' %>
+        <%= form.label :url, 'Link' %>
         <%= form.input_field :url, class: 'form-control', placeholder: 'e.g. https://google.com.sg' %>
       </div>
 
@@ -23,9 +23,8 @@
         <%= form.label :tags, 'Category' %>
         <%= form.input_field :tag_list, class: 'form-control', placeholder: 'Add a tag' %>
       </div>
-      <div class="form-actions">
-        <%= form.submit 'Post Vendor', class: 'btn btn-primary my-2' %>
-      </div>
+
+      <%= form.submit 'Post Vendor', class: 'btn btn-primary my-2' %>
     </div>
   </div>
 <% end %>

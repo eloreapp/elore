@@ -7,6 +7,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   </head>
 
   <body>
@@ -16,5 +18,9 @@
         <%= yield %>
       </div>
     </div>
+
+    <script>
+      feather.replace()
+    </script>
   </body>
 </html>

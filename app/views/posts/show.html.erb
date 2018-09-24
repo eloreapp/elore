@@ -1,3 +1,69 @@
-<h1><%= @post.name %> </h1>
-<p><%= @post.body %> </p>
-<%= @post.tag_list %>
+<div class="row">
+  <div class="col-4 mb-4">
+    <%= link_to root_path, class: 'btn btn-link' do %>
+      <i data-feather="arrow-left-circle"></i> Back to Home
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4 col-xs-12">
+    <%= image_tag url_for(@post.image.variant( resize: '400x400' )), class: 'img-fluid' %>
+  </div>
+
+  <div class="col-lg-8 col-xs-12">
+    <div class="">
+    <h1><%= @post.name %> </h1>
+    <p><%= @post.body %> </p>
+
+    <div class="social-action-btn-wrapper">
+      <div class="row">
+        <div class="col-auto mr-4 col-xs-12 mb-3">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              <i data-feather="heart"></i> Like
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              <i data-feather="bookmark"></i> Save
+            </button>
+          </div>
+        </div>
+
+        <div class="col-auto col-xs-12">
+          <div class="btn-group" role="group">
+            <%= link_to @post.url, class: 'btn btn-outline-secondary btn-sm', :target => '_blank' do %>
+              <i data-feather="globe"></i>
+            <% end %>
+            <%# <button type="button" class="btn btn-outline-secondary btn-sm">
+              
+            </button> %>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              <i data-feather="instagram"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              <i data-feather="facebook"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              <i data-feather="twitter"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+              <i data-feather="mail"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-wrapper">
+      <div class="row">
+        <div class="col-auto">
+          Posted by <%= @post.user.email %>
+          <br />
+          <%= @post.created_at %>
+        </div>
+      </div>
+    </div>
+
+    <%# <%= @post.tag_list %>
+  </div>
+</div>

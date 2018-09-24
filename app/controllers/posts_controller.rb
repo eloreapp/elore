@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @posts = if params[:tag]
       Post.tagged_with(params[:tag])
@@ -12,22 +14,31 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = Post.create( post_params )
+    @post = current_user.posts.build( post_params )
 
     if @post.save
-      flash[:notice] = 'Post successfully!'
-      
-      redirect_to root_path
+      redirect_to root_path, notice: 'Post wass successfully created'
     else 
       render :new
     end
   end
 
+  def edit
+    @post = Post.find( params[:id] )
+  end
+  
   def update
+    @post = Post.find( params[:id] )
+
+    if @post.update(post_params)
+			redirect_to @post, notice: "Post was successfully updated"
+		else
+			render 'edit'
+		end
   end
 
   def destroy
