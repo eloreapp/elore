@@ -21,7 +21,47 @@
  body {
    background-color: #F6F6F6;
 
+   .jumbotron-bg {
+    background:
+      linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1503238774835-1e800884d53b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e47ac33daae3f0b9c2add178ea367801&auto=format&fit=crop&w=2700&q=80');
+    background-size: cover;
+    border-radius: 0;
+
+    .hero-title {
+      margin-right: auto;
+      margin-left: auto;
+      width: 56%;
+
+      color: white;
+ 
+      font-size: 2rem;
+    }
+
+    .hero-lead {
+      color: white;
+    }
+   }
+
    .content-wrapper {
      padding-top: 40px;
    }
+ }
+
+ // Custom Bootstrap
+
+ .btn-primary-custom {
+   border-radius: 24px;
+   background-color: #248888;
+   border-color: #248888;
+   color: white;
+
+   &:hover {
+     background-color: #2ba1a1;
+     border-color: #2ba1a1;
+   }
+ }
+
+ .mb-60 {
+   margin-bottom: 60px;
  }

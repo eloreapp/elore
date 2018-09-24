@@ -12,7 +12,7 @@
       <div class="navbar-nav mr-auto">
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-outline-primary btn-primary-custom my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
       <ul class="navbar-nav">
@@ -20,11 +20,11 @@
           <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Log in</a>
+          <a class="nav-link mr-2" href="#">Log in</a>
         </li>
         <li class="nav-item">
-          <form class="form-inline">
-            <%= link_to 'Add', new_post_path, class: 'btn btn-outline-primary' %>
+          <form class="form-inline align-self-center">
+            <%= link_to 'Add', new_post_path, class: 'btn btn-outline-primary btn-primary-custom' %>
             <%# <button class="btn btn-outline-success" type="button">Join</button> %>
           </form>
         </li>
