@@ -1,0 +1,109 @@
+#myFooter {
+  background-color: white;
+  color: #939393;
+  margin-top: 40px;
+  padding: 24px 0 0 0;
+
+  .row-second-bar {
+    margin-bottom: 0;
+  }
+
+  .info {
+    text-align: justify;
+    color: #afb0b1;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+  }
+  h5 {
+    font-size: 18px;
+    color: #3a3a3a;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  .logo {
+    margin-top: 10px;
+  }
+  .second-bar .logo a {
+    color: white;
+    font-size: 28px;
+    float: left;
+    font-weight: bold;
+    line-height: 68px;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: #939393;
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+  .second-bar {
+    text-align: center;
+    background-color: #33373e;
+    text-align: center;
+    height: 68px;
+    a {
+      font-size: 22px;
+      color: #9fa3a9;
+      padding: 10px;
+      transition: 0.2s;
+      line-height: 68px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .social-icons {
+    float: right;
+  }
+  .facebook:hover {
+    color: #0077e2;
+  }
+  .google:hover {
+    color: #ef1a1a;
+  }
+  .twitter:hover {
+    color: #00aced;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #myFooter {
+    text-align: center;
+    .info {
+      text-align: center;
+    }
+  }
+}
+
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  min-height: 200px;
+}
+
+#myFooter {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
