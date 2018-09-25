@@ -34,9 +34,6 @@
             <%= link_to @post.url, class: 'btn btn-outline-secondary btn-sm', :target => '_blank' do %>
               <i data-feather="globe"></i>
             <% end %>
-            <%# <button type="button" class="btn btn-outline-secondary btn-sm">
-              
-            </button> %>
             <button type="button" class="btn btn-outline-secondary btn-sm">
               <i data-feather="instagram"></i>
             </button>
@@ -57,7 +54,7 @@
     <div class="info-wrapper">
       <div class="row">
         <div class="col-auto">
-          Posted by <%= @post.user.email %>
+          Posted by <%= @post.user.full_name %>
           <br />
           <%= @post.created_at %>
         </div>

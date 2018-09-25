@@ -22,13 +22,30 @@
       </div>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link mr-2" href="#">About</a>
         </li>
         <% if user_signed_in? %>
-          <%= link_to 'Log out', destroy_user_session_path, class: 'nav-link mr-2', method: :delete %>
-          <%= link_to new_post_path, class: 'btn btn-primary-custom' do %>
-            <i data-feather="plus"></i>
-          <% end %>
+          <li class="nav-item">
+            
+          </li>
+          <li class="nav-item">
+            <%= link_to new_post_path, class: 'btn btn-primary-custom mr-2' do %>
+              <i data-feather="plus"></i>
+            <% end %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.full_name  %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%# <a class="dropdown-item" href="#">Action</a> %>
+              <%= link_to 'Log out', destroy_user_session_path, class: 'dropdown-item', method: :delete %>
+              <%# <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> %>
+            </div>
+          </li>
+          
         <% else %>
           <li class="nav-item">
             <%= link_to 'Log in', new_user_session_path, class: 'nav-link mr-2' %>
