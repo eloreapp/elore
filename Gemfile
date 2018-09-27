@@ -35,6 +35,8 @@ gem 'devise'
 
 gem 'simple_form'
 
+gem 'friendly_id', '~> 5.2.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+
 # Use acts-as-taggable-on for tagging
 gem 'acts-as-taggable-on', '~> 6.0' #must be this version for Rails5
 
