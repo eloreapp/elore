@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :posts
   has_one_attached :avatar
 
+  acts_as_commontator
+
   extend FriendlyId
   friendly_id :username, :use => [:slugged, :finders]
 
