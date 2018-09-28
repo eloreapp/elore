@@ -22,10 +22,11 @@
                 <%= link_to post.name, post_path(post) %>
               </h5>
               <p class="card-text">
-                <% if current_user %>
+                <%#  TODOOOOOOOO!  %>
+                <% if current_user == @user %>
                   By: <%= link_to post.user.username, current_user %>
                 <% else %>
-                  By: <%= link_to post.user.username, user_path(post) %>
+                  By: <%= link_to post.user.username, user_path(post.user_id) %>
                 <% end %>
               </p>
             </div>

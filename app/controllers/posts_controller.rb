@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  protect_from_forgery prepend: true
 
   def index
     if params[:tag]

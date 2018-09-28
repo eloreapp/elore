@@ -2,9 +2,19 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="profile-wrapper d-flex justify-content-top flex-column align-items-center">
-        <%= image_tag url_for( @user.avatar.variant( resize: '64x64' ) ), class: 'rounded-circle img-fluid', :style => "width: 64px; height: 64px;" %>
+        <%= image_tag url_for( @user.avatar.variant( resize: '72x72' ) ), class: 'rounded-circle img-fluid', :style => "width: 72px; height: 72px;" %>
         <div class="mt-4 display-5"><%= @user.full_name %></div>
         <p class="text-muted"><%= @user.bio %> </p>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group" role="group" aria-label="first group">
+            <%# <button type="button" class="btn btn-secondary">Edit Profile</button> %>
+            <% if current_user == @user %>
+              <%= link_to 'Edit Profile', edit_user_registration_path, class: 'btn btn-dark' %>
+            <% else %>
+              <%= link_to 'Follow', root_path, class: 'btn btn-dark' %>              
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
