@@ -4,9 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # attr_accessor :slug
-
   has_many :posts
+  has_one_attached :avatar
 
   extend FriendlyId
   friendly_id :username, :use => [:slugged, :finders]

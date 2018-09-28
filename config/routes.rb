@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
 
   resources :posts
-  # get 'tags/:tag', to: 'post#index', as: :tag
+  get 'tags/:tag', to: 'post#index', as: :tag
 
   root 'posts#index'
 end

@@ -2,10 +2,10 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @posts = if params[:tag]
-      Post.tagged_with(params[:tag])
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag])
     else
-      Post.all.order( 'created_at DESC' )
+      @posts = Post.all.order( 'created_at DESC' )
     end
   end
 
