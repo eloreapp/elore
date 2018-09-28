@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    # commontator_thread_show(@commontable)
+    commontator_thread_show(@post)
   end
 
   def new

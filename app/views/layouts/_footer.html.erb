@@ -2,14 +2,17 @@
 <div class="footer mt-5 text-center">
     <div class="container">
         <div class="row ">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                <div class="ft-logo"><img src="https://easetemplate.com/free-website-templates/cointrade/images/logo.png" alt=""></div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <%# <div class="ft-logo"><img src="https://easetemplate.com/free-website-templates/cointrade/images/logo.png" alt=""></div> %>
+                <%= link_to root_path do %>
+                    <%= image_tag '/logo.png', width: 64, height: 64 %>
+                <% end %>
             </div>
         </div>
         <hr class="footer-line">
         <div class="row ">
             <!-- footer-about -->
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 ">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="footer-widget ">
                     <div class="footer-title">Company</div>
                     <ul class="list-unstyled">
@@ -22,7 +25,7 @@
             </div>
             <!-- /.footer-about -->
             <!-- footer-links -->
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 ">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="footer-widget ">
                     <div class="footer-title">Quick Links</div>
                     <ul class="list-unstyled">
@@ -34,7 +37,7 @@
             </div>
             <!-- /.footer-links -->
             <!-- footer-links -->
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 ">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="footer-widget ">
                     <div class="footer-title">Social</div>
                     <ul class="list-unstyled">

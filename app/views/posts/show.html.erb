@@ -14,7 +14,7 @@
       </div>
 
       <div class="col-lg-8 col-xs-12">
-        <h1><%= @post.name %> </h1>
+        <h1 class="mt-lg-0 mt-3"><%= @post.name %> </h1>
         <p><%= @post.body %> </p>
 
         <div class="social-action-btn-wrapper">
@@ -55,7 +55,7 @@
         <div class="info-wrapper">
           <div class="row">
             <div class="col-auto">
-              Posted by <%= link_to @post.user.full_name, user_path( @post.user_id ) %>
+              Posted by <%= link_to @post.user.username, user_path( @post.user_id ) %>
               <br />
               <%= @post.created_at %>
             </div>
